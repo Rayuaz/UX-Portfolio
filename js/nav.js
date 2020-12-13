@@ -15,5 +15,13 @@ $(document).ready(function(){
         }
     
     });
+
+    let page = window.location.href;
+    
+    if(page.match(/\?en/)) {
+        $('nav .languages a:first-child').addClass('active');
+    } else {
+        $('nav .languages a:last-child').addClass('active');
+    }
   
 });

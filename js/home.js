@@ -20,7 +20,7 @@ $(document).ready(function(){
     /////// ----------------------------------------------
 
     $('nav a').on('click', function() {
-        $('nav .active').removeClass('active');
+        $('nav .active:not(.lang)').removeClass('active');
         $(this).addClass('active'); // Tira a classe active do item antigo e bota no novo
         
         sectionID = $(this).attr('href');
