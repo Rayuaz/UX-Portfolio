@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     } else { // Se não tiver nenhuma menção na URL, "liga" o sobre mim
 
-        $('nav a').addClass('active');
+        $('nav a').eq(0).addClass('active');
         $('#sobre').addClass('active');
 
     }
@@ -21,6 +21,13 @@ $(document).ready(function(){
 
     $('nav a').on('click', function() {
         $('nav .active:not(.lang)').removeClass('active');
+
+        if($(this).hasClass('lang')) {
+            $('nav .active').removeClass('active');
+        } else {
+            $('nav .active:not(.lang)').removeClass('active');
+        }
+
         $(this).addClass('active'); // Tira a classe active do item antigo e bota no novo
         
         sectionID = $(this).attr('href');
