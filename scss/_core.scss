@@ -1,0 +1,45 @@
+@import "breakpoints";
+@import "config";
+@import "utilities";
+
+body {
+    padding-top: $nav-height; // Pra compensar o header
+}
+
+h1, h2, h4 {
+    font-family: $h-font;
+}
+
+h3 {
+    font-family: $h3-font;
+}
+
+p, a {
+    font-family: $p-font;
+    font-size: $p-size;
+    font-weight: 200;
+    line-height: 35px;
+
+    @include media("<=phablet") {
+        font-size: $p-mobile;
+        line-height: 25px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: black;
+    opacity: .85;
+
+    transition: all 0.2s ease-in-out;
+}

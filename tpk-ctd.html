@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Fernandes - TPK Miniaturas</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tpk.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <button class="hamburger" aria-label="Menu">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p>Menu</p>
+        </button>
+
+        <ul>
+            <li><a href="index.html#sobre">Sobre mim</a></li>
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#hobbies">Hobbies</a></li>
+            <li><a href="index.html#contato">Contato & Links</a></li>
+        </ul>
+    </nav>
+
+    <section id="intro">
+
+        <div class="background">
+            <img class="background tpk-bg" src="img/tpk-bg.jpg" srcset="img/tpk-bg.jpg 1920w, img/tpk-bg-med.jpg 1000w, img/tpk-bg-sml.jpg 500w">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="contents-ctd">
+    
+            <img class="logo tpk-logo" src="img/tpk-logo.svg" alt="Logo de TPK Miniaturas">
+
+        </div>        
+
+    </section>
+
+    <main id="ctd">
+
+        <section id="home">
+
+            <div class="grid txt-img">
+    
+                <div class="texto">
+                    
+                    <h1>Home</h1>
+                    <p>
+                        Não é nenhum conhecimento oculto que quanto mais longe do fold estiver um conteúdo, menores são as chances dele ser visto. Pensando nisso, eu tentei manter o menor scroll vertical possível para esta página, para que o usuário pudesse visualizar todo o conteúdo da página sem ficar sobrecarregado de informação.
+                    </p>
+    
+                    <h2>Hero</h2>
+                    <p>
+                        Essa seção vai ser usada para anunciar novas coleções de miniaturas e promoções no futuro, mas durante o nosso soft launch, está cumprindo a função de introduzir o usuário à função e à missão da loja. Uma consideração importante que eu tive durante a implementação, foi desenvolver um sistema que permitisse exibir os textos como elemento de HTML, por questões de acessibilidade, e para manter a definição da tipografia.
+                    </p>
+    
+                    <h2>Ofertas da semana e destaques</h2>
+                    <p>
+                        Em vez de ter sessões para “produtos recentes”, “mais vendidos”, e outras categorias de produtos, eu optei por exibir apenas as ofertas da semana (para manter os usuários voltando para a loja periodicamente), e uma sessão de “destaques” com abas para diferentes categorias de produto. Meu objetivo com essa decisão era diminuir o espaço vertical da página, e facilitar para o usuário visualizar apenas o conteúdo que lhe interessa.
+                    </p>
+    
+                    <h2>Mural da comunidade</h2>
+                    <p>
+                        O mural da comunidade puxa posts com a hastag #TPKMiniaturas no instagram. Na página de produto, os usuários são encorajados a postar fotos de suas miniaturas no instagram com essa hastag. O objetivo é criar engajamento com a comunidade, gerar publicidade orgânica, e mostrar fotos reais dos produtos vendidos na loja (devido ao catálogo enorme da loja, eu não posso imprimir e fotografar todos os modelos, então optei por usar renders).
+                        <br><br>
+                        Essa seção é o maior motivo pelo qual eu queria manter o menor tamanho vertical possível para essa página. Por uma questão de hierarquia de informação, não faria muito sentido jogar essa seção para o topo da página, mas ela é extremamente relevante por gerar esse engajamento com a comunidade e mostrar fotos reais dos produtos.
+                    </p>
+    
+                </div>
+    
+                <div class="imagem">
+                    <img src="img\tpk\ss\ss3.png" alt="Home da loja">
+                </div>
+    
+            </div>
+    
+        </section>
+
+        <section id="Catalogo">
+
+            <div class="grid img-txt">
+    
+                <div class="texto">
+                    
+                    <h1>Catálogo</h1>
+                    <p>
+                        Essa página foi o meu foco durante o processo de design. Uma das coisas que eu observei durante a minha pesquisa é que a experiência de navegar pelos modelos e, em especial, procurar por uma categoria específica, é horrível. A maioria das lojas não têm um bom sistema de categorização de seus produtos, e/ou têm uma péssima interface para exibir os filtros de pesquisa.
+                        <br><br>
+                        Meu objetivo nessa página foi justamente fazer essa navegação uma experiência agradável, que instigue o usuário a navegar pelos produtos mesmo que ele não tenha intenção de comprar nada.
+                    </p>
+    
+                    <h2>Anatomia do card de produto</h2>
+                    <p>
+                        Meu primeiro passo para criar a experiência de navegação ideal foi desenvolver um card de produto que contenha todas as informações necessárias, sendo visualmente agradável.
+                    </p>
+    
+                    <div class="tpk-card">
+                        <div class="thumb">
+                            <img src="img\tpk\tpk-card\thumb-1.jpg" alt="">
+                            <img class="promo" src="img\tpk\tpk-card\promo.svg" alt="">
+                        </div>                    
+                        <h5>Jur'egh, o Ogro do Pântano</h5>
+                        <div class="swatches">
+                            <div class="sel-var"><img src="img\tpk\tpk-card\checkmark.svg" alt=""></div>
+                            <img class="swatch" src="img\tpk\tpk-card\thumb-1.jpg" alt="">
+                            <img class="swatch" src="img\tpk\tpk-card\thumb-2.jpg" alt="">
+                        </div>
+                        <div class="preco-promo">R$ 59,00</div>
+                        <div class="preco">R$ 39,00</div>
+                        <span>ou <b>R$ 36.27</b> via depósito bancário</span>
+                    </div>
+    
+                    <h4>Imagem</h4>
+                    <p>
+                        Numa loja de eletrônicos, por exemplo a foto do produto não é tão relevante porque o usuário normalmente está navegando pelos nomes e/ou pelos preços.  No meu caso porém, o produto é completamente visual. Não há “specs” do modelo, a imagem é um fator extremamente relevante para a escolha do usuário, e por isso eu escolhi deixar a imagem um pouco maior do que na maioria dos ecommerces.
+                    </p>
+    
+                    <h4>Título</h4>
+                    <p>
+                        Uma das coisas que eu observei é que o título do produto é um elemento deixado meio de lado na maioria dos designs de ecommerce. Normalmente é uma fonte com peso normal, all caps, e muitas vezes o layout nem tem espaço para acomodar o título inteiro. Parte desse problema, eu assumo, se deve ao fato da maioria dessas lojas venderem produtos de terceiros, com uma grande variação de tamanho entre os títulos. Como eu tenho controle total sobre a nomenclatura dos meus produtos, eu me senti muito mais à vontade para usar uma tipografia visualmente coerente e legível.
+                    </p>
+    
+                    <h4>Variações</h4>
+                    <p>
+                        Atualmente, o catálogo da loja conta com cerca de 300 produtos, e mais de 1300 variações. A maioria dos modelos tem duas ou mais variações. Se eu fosse exibir cada variação como um produto separado, o catálogo ficaria gigantesco, e o usuário iria navegar por páginas onde metade dos produtos são variações do mesmo modelo (isso acontece muito nos sites que eu visitei durante a minha pesquisa). Para evitar esse caos, eu resolvi agrupar as todas as variações de cada modelo dentro de um produto só, e durante a navegação o usuário pode clicar nos botões de variação para ver as diferentes poses daquele modelo.
+                    </p>
+    
+                    <h4>Preço</h4>
+                    <p>
+                        O preço real do produto grande e extra-bold. Eu vejo muitos ecommerces que exibem o preço das parcelas, ou o preço com desconto à vista com destaque, para que o produto pareça mais barato do que realmente é. Eu não concordo com esse tipo de prática, e procurei evitar a todo o custo essas “pegadinhas” para iludir os usuários.
+                    </p>
+    
+                    <h2>Filtros de pesquisa</h2>
+                    <p>
+                        A minha maior fonte de dor de cabeça durante esse projeto. Essa feature envolveu um monte de PHP, que, como mencionado anteriormente, eu não tinha muito conecimento sobre.
+                        <br><br>
+                        Eu quis criar uma interface visual cativante para o menu de filtros. Na maioria dos outros ecommerces, esse filtros são apenas checkboxes com labels. Esses tipos de menu não só são desisnteressantes ou desagradáveis visualmente, mas também dificultam na hora de achar um tipo específico de filtro, pois eles são todos iguais.
+                        <br><br>
+                        A minha solução para esse problema foi criar botões diferentes para cada tipo de filtro. Botões grandes e extremamente satisfatórios de clicar.
+                        <br><br>
+                        Além dos botões, o próprio sistema de categorização dos produtos é bem robusto para acomodar categorias relevante para cada produto, e eu também implementei um sistema de tags para agrupar modelos similares em tema, aparência, gênero, etc. 
+                        <br><br>
+                        Apesar do visual diferenciado, eu me assegurei de que esse menu não seria um problema de acessibilidade. “Por de trás das cortinas”, todos esses botões são checkboxes, devidamente aria-labelled, e navegáveis pelo teclado.
+                    </p>
+    
+                </div>
+    
+                <div class="imagem">
+                    <img class="sticky" src="img\tpk\ss\ss6.png" alt="Catálogo de produtos">
+                </div>
+    
+            </div>
+    
+        </section>
+    
+        <section id="produto">
+    
+            <div class="grid txt-img">
+    
+                <div class="texto">
+                    
+                    <h1>Página do produto</h1>
+                    <p>
+                        Essa página foi um tanto desafiadora pelo tanto de informação que precisava ser exibida acima do fold.
+                    </p>
+    
+                    <h2>Galeria</h2>
+                    <p>
+                        Um dos problemas de fotos de miniaturas é que é muito difícil discernir qual é o tamanho real daquele modelo. Minha solução para esse problema começou no próprio render, onde eu incluí uma grid no próprio “chão” da imagem, na qual cada quadrado representa 1 centímetro.  
+                        <br><br>
+                        Eu também incluí as dimensões do modelo como um overlay na própria imagem. Esse overlay é um elemento HTML o que me permite fazer alterações no design sem ter que refazer todas as imagens, e que o usuário veja a imagem inteira sem overlays, quando clicar na imagem para ver a versão ampliada.
+                        <br><br>
+                        Implementar essa feature foi um desafio de PHP e javascript, mas vai me poupar muito tempo que eu gastaria adicionando esse overlay em cada imagem no photoshop.
+                    </p>
+    
+                    <h2>Prazo de produção</h2>
+                    <p>
+                        Os produtos da loja são produzidos sob demanda, então eu tomei cuidado durante todo o processo de design para deixar essa informação bem explícita. Isso é feito de maneira mais evidente nesse bloco, mas eu também tomei muito cuidado no próprio texto do site -- a palavra “compra”, por exemplo, foi substituída por “pedido”, e a página de “loja” se chama “catálogo”.
+                        <br><br>
+                        No back-end, cada produto tem um valor de dias de produção”. Esse valor é exibido na página do produto, e novamente no carrinho e no checkout, com a soma de todos os produtos.
+                    </p>
+    
+                    <h2>Variações</h2>
+                    <p>
+                        Essa foi uma parte crítica do design dessa página. Eu vi muitos exemplos ruins de produtos variáveis em outros ecommerces, especialmente no Ali Express, e até mesmo no próprio comportamento padrão do woocommerce (a plataforma de ecommerce do wordpress). Nesses exemplos, as variações não são selecionadas por padrão, o preço é exibido como um intervalo (R$ 5,99 - R$ 19,99, por exemplo), e o botão de compra é desativado até que o usuário selecione uma opção. 
+                        <br><br>
+                        Isso é um problema, primeiro, por criar uma quantidade desnecessária de cliques para adicionar o produto ao carrinho, mas principalmente, no meu caso, por adicionar mais informação à uma página que já é bem carregada.
+                        <br><br>
+                        Minha solução foi, primeiramente, adicionar uma variação selecionada por padrão. Além disso, eu joguei esse bloco para baixo do botão de adicionar ao carrinho. 
+                        <br><br>
+                        Isso, na minha opinião (há de ser testado com usuários), melhora o ritmo de leitura da página, pois o usuário dá de cara com o nome, o preço, e o botão de adicionar ao carrinho, que são as informações mais importantes, e só depois vê as variações, criando uma experiência um pouco mais suave.
+                    </p>
+    
+                    <h2>Dúvidas e comentários</h2>
+                    <p>
+                        Essa seção é mais um esforço pra tornar todo o processo o mais transparente possível. O usuário que tiver alguma dúvida pode postá-la diretamente na página do produto, de forma pública e anônima, sanando a sua dúvida, e possivelmente a de outros usuários.
+                    </p>
+    
+                    <h2>Mural da comunidade</h2>
+                    <p>
+                        Diferente do mural da comunidade da home, essa seção puxa os posts de uma hashtag específica para cada produto. Assim o usuário tem uma ideia de como é o produto final, e pode usar as fotos como inspiração para fazer a sua própria pintura (os modelos vendidos na loja não são pintados por padrão).
+                    </p>
+    
+                </div>
+    
+                <div class="imagem">
+                    <div class="sticky-container">
+                        <img class="sticky" src="img\tpk\ss\ss7.png" alt="Página de produto (parte 1 de 2)">
+                    </div>
+                    <img src="img\tpk\ss\ss8.png" alt="Página de produto (parte 2 de 2)">
+                </div>
+    
+            </div>
+    
+        </section>
+    
+        <section id="pintores">
+    
+            <div class="grid img-txt">
+    
+                <div class="texto">
+                    
+                    <h1>Lista de pintores</h1>
+                    <p>
+                        Os modelos vendidos na loja não são pintados por padrão, e eu não tenho confiança nas minhas habilidades de pintor para cobrar pelo meu serviço. Mas, apesar de ser um “sub-hobby”, pintar miniaturas não é pra todo mundo. Pensando nisso, eu desenvolvi essa página, com uma lista de pintores brasileiros. 
+                        <br><br>    
+                        O objetivo dessa página é minimizar a perda de possíveis consumidores que deixariam de comprar pois os modelos não vêm pintados, criar uma vínculo com a comunidade de pintores de miniatura, e melhorar o SEO da loja.
+                        <br><br>
+                        Atualmente, cada card conta com o nome do pintor, sua localização, meios de contato, e 4 exemplos de trabalho. Eu pretendo, junto com o soft launch da loja, anunciar essa lista e pedir feedback sobre a página.
+                    </p>
+    
+                </div>
+    
+                <div class="imagem">
+                    <img src="img\tpk\ss\ss5.png" alt="Lista de pintores brasileiros">
+                </div>
+    
+            </div>
+    
+        </section>
+
+    </main>
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/nav.js"></script>
+
+</html>

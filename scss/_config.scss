@@ -1,0 +1,21 @@
+$p-font: 'Barlow', sans-serif;
+$h-font: 'Inter', sans-serif;
+$h3-font: 'Source Code Pro', monospace;
+
+$p-size: 1.25rem;
+$p-mobile: 1rem;
+
+$nav-height: 50px;
+
+$grid-def: 12;
+$padding-def: 70px;
+
+$breakpoints: (
+    'phone': 320px,
+    'bigPhone': 450px,
+    'phablet': 600px,
+    'tablet': 768px,
+    'bigTablet': 1024px,
+    'desktop': 1280px,
+    'bigDesktop': 1920px
+);

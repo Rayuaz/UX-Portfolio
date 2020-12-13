@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Fernandes - Warlock's Book Stock</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/warlock.min.css">
+</head>
+
+<body>
+    
+    <nav>
+        <button class="hamburger" aria-label="Menu">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p>Menu</p>
+        </button>
+
+        <ul>
+            <li><a href="index.html#sobre">Sobre mim</a></li>
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#hobbies">Hobbies</a></li>
+            <li><a href="index.html#contato">Contato & Links</a></li>
+        </ul>
+    </nav>
+
+    <section id="intro">
+
+        <div class="background">
+            <img class="background warlock-bg" src="img/warlock-bg.jpg" srcset="img/warlock-bg.jpg 1920w, img/warlock-bg-med.jpg 1000w, img/warlock-bg-sml.jpg 500w">
+            <div class="overlay"></div>
+            <div class="fade"></div>
+        </div>
+
+        <div class="contents">
+    
+            <img class="logo warlock-logo" src="img/warlock-logo.svg" alt="Warlock's Book Stock logo">
+            <p>
+                Warlock’s Book Stock é um repositório de magias para Dungeons & Dragons 5e (D&D). Nele você pode pesquisar todas as magias de D&D, usando o sistema de medição métrico ou imperial, e criar “livros de magia”.
+                <br><br>
+                Esse, a princípio, era um exercício de traduzir um layout de cartas físicas, que eu já havia desenvolvido, em um template de web, para praticar meu HTML, CSS e PHP, mas acabei extrapolando a ideia inicial e criando um repositório de magias de D&D.
+                <br><br>
+                Após um mês de trabalho, eu achei prudente voltar a trabalhar no projeto que originou esse “exercício”. Ele está quase feaure complete, e pretendo lançá-lo em meados de 2021.
+            </p>
+
+        </div>        
+
+    </section>
+
+    <section id="video">
+
+        <div class="contents">
+
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YENPgR1Qt8s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="problema">
+
+        <div class="background">
+            <img src="img\warlock\folheando-1.gif">
+            <div class="overlay"></div>
+            <div class="fade"></div>
+        </div>
+
+        <div class="contents">
+
+            <h1>Criar personagens conjuradores em D&D é bem trabalhoso</h1>
+
+            <p>
+                D&D conta com mais de 500 magias distribuídas em 5 livros. Criar um personagem mágico de maneira tradicional é uma tarefa assustadora, e manter o controle de todas essas magias é mais assustador ainda.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="features">
+
+        <div class="contents">
+
+            <div class="imagem">
+
+                <img src="img\warlock\sidebar.gif" alt="Sidebar do site">
+
+            </div>
+
+            <div class="texto">
+
+                <h1>Mais que um repositório</h1>
+
+                <div class="list-item">
+                    <h4>Grimórios</h4>
+                    <p>Salve as magias de seus personagens e controle seus spell slots e level ups</p>
+                </div>
+                
+
+                <div class="list-item">
+                    <h4>Conteúdo editável</h4>
+                    <p>Crie suas próprias magias, e compartilhe com a comunidade!</p>
+                </div>
+                
+
+                <div class="list-item">
+                    <h4>Sistema métrico</h4>
+                    <p>Mude entre os sistemas de medidas métrico e imperial à vontade. </p>
+                </div>
+                
+
+                <div class="list-item">
+                    <h4>Conteúdo imprimível</h4>
+                    <p>Pague o quanto quiser para imprimir uma versão física dos seus grimórios.</p>
+                </div>
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="desafios">
+
+        <div class="contents">
+
+            <div class="texto">
+
+                <h1>Desafios</h1>
+                <p>
+                    Esse foi um projeto bem desafioador de um ponto de vista técnico, como era de se esperar de um exercício.
+                    <br><br>
+                    O sistema de grimório levou algumas milhares de linhas de PHP e javascript pra funcionar, mas fiquei bem satisfeito com os resultados.
+                    <br><br>
+                    Manejar o caos visual que é exibir centenas de magias ao mesmo tempo foi a parte mais complicada do projeto.
+                </p>
+    
+            </div>
+    
+            <div class="imagem">
+    
+                <img src="img\warlock\card.svg" alt="Carta de magia">
+    
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="melhorar">
+
+        <div class="contents">
+
+            <h1>O que pode melhorar</h1>
+
+            <h2>Interações do grimório</h2>
+            <p class="p1">
+                Atualmente, a maneira como você adiciona uma magia ao seu livro, é clicando na carta para expandí-la. Essa é a mesma interação usada para ler os detalhes da magia. Uma solução melhor para esse problema sem mudar o layout da carta seria adicionar um botão de “adicionar ao livro” que aparece com o hover do mouse. 
+            </p>
+
+            <div class="grid">
+
+                <div class="imagem">
+                    <img src="img\warlock\magic.svg">
+                </div>
+                <div class="texto">
+                    <h2>Páginas individuais</h2>
+                    <p>
+                        Algumas magias têm bastante texto, e o formato das cartas não é exatamente ideal para esse tipo de leitura. Esse layout existe por causa das limitações da mídia física, mas sendo este um produto digital, seria ideal adicionar um botão para visualizar a magia em sua própria página. Isso também facilitaria para compartilhar magias.
+                    </p>
+                </div>
+
+            </div>
+
+            <h2>Análise de dados e feedback</h2>
+            <p>
+                Eu ainda não lancei o site, então ainda tenho muito dado para analisar e feedback para coletar.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="screenshots">
+
+        <div class="contents">
+
+            <img src="img\warlock\ss1.jpg" srcset="img\warlock\ss1.jpg 1920w, img\warlock\ss1-med.jpg 1000w, img\warlock\ss1-sml.jpg 500w" alt="Screenshot da home do site">
+
+            <img src="img\warlock\ss2.jpg" srcset="img\warlock\ss2.jpg 1920w, img\warlock\ss2-med.jpg 1000w, img\warlock\ss2-sml.jpg 500w" alt="Screenshot da página de grimório">
+
+        </div>
+
+    </section>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/nav.js"></script>
+
+</html>

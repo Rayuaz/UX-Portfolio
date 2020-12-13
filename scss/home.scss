@@ -1,0 +1,370 @@
+@import "reset";
+@import "core";
+@import "nav";
+
+.home {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    section {
+        display: none;
+        opacity: 0;
+    }
+
+    section.active {
+        @include background(black, $grid-def, 0 $padding-def);
+        max-height: 100%;
+
+        @include media("<phablet") {
+            padding: 0 5%;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    
+    @include flexCenter;
+
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 4.375rem;
+    font-weight: bold;
+
+    @include media("<phablet") {
+        font-size: 2.5rem;
+    }
+}
+
+h3 {
+    font-family: $h3-font;
+    font-weight: 300;
+    font-size: 1.75rem;
+
+    @include media("<phablet") {
+        font-size: 1.25rem;
+    }
+}
+
+#sobre {
+    margin-top: $nav-height;
+
+    grid-template-areas: 
+        "h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1"
+        "h3 h3 h3 h3 h3 h3 h3 h3 h3 h3 h3 h3"
+        ".. pp pp pp pp pp pp pp pp pp pp .."
+    ;
+
+    h1 {
+        grid-area: h1;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        grid-area: h3;
+        text-align: center;
+    }
+
+    p {
+        grid-area: pp;
+        text-align: center;
+        margin-top: 70px;
+        max-width: 950px;
+        justify-self: center;        
+    }
+}
+
+#projetos {
+
+    &.active {
+        display: block;
+        padding: 0;
+    }
+
+    .projetos-sect {
+        position: relative;
+        height: calc((100vh - 42px) / 3);
+        overflow: hidden;
+
+        @include flexCenter;
+
+        transition: width 0.3s cubic-bezier(0.42, 0, 0.18, 0.99);
+
+        .logo {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .tpk-logo {
+            height: 67%;
+            z-index: 1;
+        }
+
+        .warlock-logo {
+            height: 77%;
+            z-index: 1;
+        }
+
+        .taverna-logo {
+            height: 48%;
+            z-index: 1;
+            padding: 0 50px;
+
+            @include media("<tablet") {
+                height: auto;
+                max-height: 48%;
+                max-width: 100%;
+            }
+
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tpk-bg {
+            object-position: center -300px;
+            @include media("<desktop") {
+                object-position: unset;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            & > .logo {
+                transform: scale(1.02);
+            }
+
+            & > .overlay {
+                opacity: .9;
+            }
+        }
+    }
+
+    #tpk {
+        .overlay {
+            background-color: rgb(56, 0, 0);
+            opacity: .9;
+            mix-blend-mode: multiply;
+        }
+
+        &:hover {
+            & > .overlay {
+                opacity: .97;
+            }
+        }
+    }
+
+}
+
+
+
+#hobbies {
+
+    grid-template-areas: "lft lft lft lft ... ... rgt rgt rgt rgt rgt rgt";
+
+    .left-col {
+        grid-area: lft;
+
+        h1 {
+            margin-bottom: 50px;
+        }
+    }
+
+    .right-col {
+        grid-area: rgt;
+
+        height: fit-content;
+        align-self: center;
+
+        @include grid(3);
+        grid-row-gap: 20px;
+
+        .hobby-thumb {
+            width: 100%;
+            position: relative;
+
+            &-content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .overlay {
+                    background-color: rgba(0,0,0,0);
+                    opacity: 0;
+
+                    @include flexCenter;
+                    padding: 15px;
+
+                    transition: all 0.15s ease-in-out;
+                }
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+    
+            &:hover {
+                cursor: pointer;
+
+                & > .hobby-thumb-content .overlay {
+                    background-color: rgba(0,0,0,0.85);
+                    opacity: 1;
+                }
+            }
+
+            @include media("<bigDesktop") {
+                p {
+                    font-size: 1rem;
+                    line-height: 1;
+                }
+            }
+
+        }
+
+    }
+
+    .bigger-images {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            display: none;
+        }
+        
+        & img.active {
+            display: block;
+            max-width: calc(100% - 140px);
+            max-height: 100%;
+        }
+
+        & button {
+            position: absolute;
+
+            &.img-close {
+                top: 20px;
+                right: 20px;
+            }
+
+            &.img-arrow{
+                top: calc(50% - 35px);
+            }
+
+            &.prev-img {
+                left: 20px;
+            }
+
+            &.next-img {
+                right: 20px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    @include media("<bigTablet") {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "lft"
+            "rgt"
+        ;
+        grid-row-gap: 70px;
+
+        padding-top: 20px;
+
+        & .right-col {
+            padding-bottom: 5%;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+
+        & .bigger-images {
+
+            & button {
+                transform: scale(0.5);
+
+                &.prev-img {
+                    left: 0;
+                }
+
+                &.next-img {
+                    right: 0;
+                }
+            }
+
+            & img.active {
+                max-width: 90%;
+            }
+
+        }
+    }
+
+}
+
+
+
+#contato {
+    &.active {
+        display: block;
+        height: 100%;
+        padding-top: 50px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+
+        &:nth-child(4) {
+            margin-top: 70px;
+        }
+    }
+
+    h3 {
+        margin-bottom: 25px;
+    }
+
+    @include media("<=phablet") {
+        padding-top: 20px;
+
+        & h3, & h1 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+}
+
+.home .active {
+    opacity: 1;
+}

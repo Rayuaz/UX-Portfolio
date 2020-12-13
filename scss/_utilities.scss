@@ -1,0 +1,45 @@
+// -----> Grid
+@mixin grid($columns, $gap: 20px) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-column-gap: $gap;
+}
+
+// -----> Cor de texto baseada na cor do background
+@function textColor($cor) {
+
+    @if(lightness($cor) < 70) {
+
+        @return white;
+
+    } @else {
+
+        @return black;
+
+    }
+    
+}
+
+@mixin background($cor, $grid: false, $padding: false) {
+
+    background-color: $cor;
+    color: textColor($cor);
+    width: 100%;
+
+    @if($grid) {
+        @include grid($grid);
+    }
+
+    @if($padding) {
+        padding: $padding;
+    }
+
+}
+
+
+// -----> Centralizar os elementos
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

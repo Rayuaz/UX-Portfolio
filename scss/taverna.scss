@@ -1,0 +1,258 @@
+@import "projetos";
+
+#intro {
+
+    .contents {
+
+        grid-template-areas: 
+            "... ... ... ... log log log log ... ... ... ..."
+            "... ... txt txt txt txt txt txt txt txt ... ..."
+        ;
+
+        .logo {
+            margin-bottom: 70px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        @include media("<bigTablet") {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "log"
+                "txt"
+            ;
+        }
+
+    }
+
+}
+
+#aprender {
+
+    overflow: hidden;
+
+    .contents {
+
+        display: block;
+
+        padding-left: calc(#{$padding-def} + 14%);
+        padding-right: calc(#{$padding-def} + 14%);
+
+        text-align: center;
+
+        @include media("<bigTablet") {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .imagem {
+            position: relative;
+            width: 100vw;
+
+            margin-top: 150px;
+            margin-bottom: 100px;
+            margin-left: calc(-50vw + 50%);
+
+            img {
+                max-width: 65%;
+                position: absolute;
+                top: 0;
+
+                opacity: 0;
+
+                transition: all 0.7s cubic-bezier(0.42, 0, 0.18, 0.99);
+
+                &.espacamento {
+                    position: static;
+                    visibility: hidden;
+                }
+
+                &.esquerda {
+                    left: -50%;
+
+                    &.visivel {
+                        left: -10%;
+                        opacity: 1;
+                    }
+                }
+
+                &.direita {
+                    right: -50%;
+
+                    &.visivel {
+                        right: -10%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+        h2 {
+            margin: 100px 0;
+        }
+
+        .disclaimer {
+            font-size: 80%;
+            color: #696969;
+        }
+
+    }
+
+}
+
+#pratico, #perfeito {
+
+    .contents {
+        display: flex;
+        max-width: 1280px;
+
+        position: relative;
+
+        @include media("<desktop") {
+            flex-direction: column;
+        }
+
+        .grid {
+            position: absolute;
+            top: $padding-def;
+            left: 0;
+            z-index: 1;
+
+            background-color: transparent;
+            color: white;
+
+            p {
+                grid-area: txt;
+            }
+
+            h1 {
+                margin-bottom: 10px;
+            }
+
+            @include media("<bigTablet") {
+                position: static;
+                display: block;
+            }
+        }
+
+        img {
+            max-width: 65%;
+
+            @include media("<desktop") {
+                align-self: center;
+                margin-top: 100px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+#pratico {
+    background-color: #B557A1;
+
+    .contents {
+        justify-content: flex-end;
+    }
+
+    .grid {
+        grid-template-areas: 
+            "... hh1 hh1 hh1 hh1 hh1 ... ... ... ... ... ..."
+            "... txt txt txt txt txt ... ... ... ... ... ..."
+        ;
+    }
+
+}
+
+#perfeito {
+    background-color: #66BAE9;
+
+    .grid {
+        grid-template-areas: 
+            "... ... ... ... ... ... ... hh1 hh1 hh1 hh1 ..."
+            "... ... ... ... ... ... ... txt txt txt txt ..."
+        ;
+    }
+
+}
+
+#desafios {
+
+    .contents {
+
+        display: block;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .grid {
+
+            margin-bottom: 100px;
+
+            @include media("<bigTablet") {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "txt"
+                    "img"
+                !important;
+            }
+
+            img {
+                border-radius: 4%;
+                width: 80%;
+
+                grid-area: img;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+
+                @include media("<desktop") {
+                    width: 100%;
+                }
+
+                @include media("<bigTablet") {
+                    margin-top: 100px;
+                }
+
+            }
+
+            &.txt-img {
+                grid-template-areas:
+                    "... txt txt txt txt ... img img img img img ..."
+                ;
+
+                img {
+                    justify-self: flex-end;
+                }
+            }
+
+            &.img-txt {
+                grid-template-areas:
+                    "... img img img img img ... txt txt txt txt ..."
+                ;
+            }
+
+            &.vert {
+                grid-template-areas: 
+                    "... ... ... txt txt txt txt txt txt ... ... ..."
+                    "... ... ... ... img img img img ... ... ... ..."
+                ;
+
+                text-align: center;
+
+                img {
+                    width: 100%;
+                    margin-top: 100px;
+                }
+            }
+
+        }
+
+    }
+
+}

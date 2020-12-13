@@ -1,0 +1,245 @@
+@import "projetos";
+
+#intro {
+
+    .contents {
+        grid-template-areas: 
+            "... log log log ... txt txt txt txt txt txt ..."
+        ;
+
+        @include media("<bigTablet") {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "log"
+                "txt"
+            ;
+        }
+
+        .logo {
+            max-width: 295px;
+
+            @include media("<bigTablet") {
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+}
+
+#problema {
+
+    position: relative;
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        .overlay {
+            opacity: 0.75;
+        }
+
+        .fade {
+            top: 0;
+            bottom: auto;
+
+            height: 50%;
+
+            transform: scaleY(-1);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .contents {
+        display: block;
+
+        padding: 10% $padding-def;
+
+        color: white;
+        text-align: center;
+
+        z-index: 1;
+
+        @include media("<bigTablet") {
+            padding: 10% 5%;
+        }
+
+        h1 {
+            padding: 0 7%;
+        }
+
+        p {
+            margin: 0 15%;
+        }
+    }
+
+}
+
+#features .contents {
+
+    grid-template-areas: 
+        "img img img img ... txt txt txt txt txt txt ..."
+    ;
+
+    @include media(">desktop") {
+        grid-template-areas: 
+            "... img img img ... txt txt txt txt txt txt ..."
+        ;
+    }
+
+    @include media("<desktop") {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "txt"
+            "img"
+        ;
+    }
+
+    .imagem {
+        @include flexCenter;
+
+        img {
+            max-width: 100%;
+
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    
+
+    .texto {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h1, h4, p {
+            text-align: center;
+        }
+
+        .list-item {
+            margin: 40px 7%;
+            max-width: 450px;
+        }
+
+    }
+
+    
+
+}
+
+#desafios {
+
+    background-color: #f2f2f2;
+
+    .contents {
+
+        grid-template-areas: 
+            "txt txt txt txt txt img img img img img img img"
+        ;
+
+        @include media("<bigTablet") {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "txt"
+                "img"
+            ;
+        }
+
+        p {
+            margin-right: 7%;
+        }
+
+        .imagem {
+            @include flexCenter;
+
+            img {
+                width: 100%;
+                max-width: 770px;
+
+                @include media("<bigTablet") {
+                    margin-top: 100px;
+                }
+            }
+        }
+
+    }
+
+}
+
+#melhorar {
+
+
+    .contents {
+        display: block;
+        padding: $padding-def calc(#{$padding-def} + 7%);
+
+        @include media("<bigTablet") {
+            padding: $padding-def 5%;
+        }
+
+        img {
+            width: 70%;
+            max-height: 100%;
+            margin-bottom: 100px;
+        }
+    
+        .grid {
+
+            grid-template-areas: 
+                "... ... img img img ... txt txt txt txt txt txt"
+            ;
+
+            @include media("<bigTablet") {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "txt"
+                    "img"
+                ;
+            }
+
+            .imagem {
+                @include flexCenter;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 100px;
+        }
+
+        .p1 {
+            margin-right: 50%;
+
+            @include media("<desktop") {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+#screenshots .contents {
+    display: block;
+
+    img {
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: 50px;
+    }
+}
