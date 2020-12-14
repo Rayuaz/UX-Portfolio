@@ -29,6 +29,10 @@ main {
     @include flexCenter;
 
     overflow: hidden;
+
+    @include media("<bigTablet") {
+        overflow-y: scroll;
+    }
 }
 
 h1 {
