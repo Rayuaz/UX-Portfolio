@@ -44,8 +44,10 @@ $(document).ready(function(){
 
         // Links
         $('#contato a h3').eq(0).text('Linkedin');
-        $('#contato a h3').eq(1).text('Source code for this website');
-        $('#contato a h3').eq(2).text('Repository with a few old projects');
+        $('#contato a h3').eq(1).text('Resumé');
+        $('#contato a h3').eq(1).attr('href', 'https://drive.google.com/file/d/1f7z4pwODpcARLGOiCofw_gVy_UzPz1FW/view?usp=sharing')
+        $('#contato a h3').eq(2).text('Source code for this website');
+        $('#contato a h3').eq(3).text('Repository with a few old projects');
 
     }
   
