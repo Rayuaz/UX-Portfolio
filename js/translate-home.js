@@ -17,7 +17,7 @@ $(document).ready(function(){
 
         $('#sobre h1').text("Hi, I'm Alan!");
         $('#sobre h3').text("UI/UX Designer and Maker");
-        $('#sobre p').text("I'm 23 years old, living in Curitiba - Brazil, and have a bachelor's degree in design by UTFPR. My area of expertise is UI/UX, but I'm also proficient in HTML/CSS, javascript, and know some PHP (mostly for Wordpress). I also know my way around digital retouching, prototyping, video editing, bread making, and pottery. I have an extremely agitated mind, ease of learning, and I'm constantly developing new skills for solving new challanges.");
+        $('#sobre p').text("Bachelor of design by UTFPR, currently living in Curitiba, Brazil. My area of expertise is UI/UX, but I'm also proficient in HTML/CSS, javascript, and know some PHP (mostly for Wordpress). I also know my way around digital retouching, video editing, bricolage, bread making, and pottery. I have an extremely agitated mind and ease of learning, and I'm constantly developing new skills for solving new challanges.");
 
         // Hobbies -------------------------------
         // ---------------------------------------
