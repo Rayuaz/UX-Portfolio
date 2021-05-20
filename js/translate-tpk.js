@@ -24,7 +24,7 @@ $(document).ready(function(){
         // ---------------------------------------
 
         // Texto
-        $('#intro p').html("TPK is a gaming miniatures store with a heavy focus on user experience. It's the coming togheter of two of my greatest passions: maker culture and RPGs, fueled by my burning hatred of the typical gaming miniature shopping experience.<br><br>This was the biggest project of my life, and made me develop a bunch of skills, from UI/UX and front end development, to branding and business management. The website and all the logistical side of things are ready, and I plan on releasing it on january 2021.");
+        $('#intro p').html("TPK is a gaming miniatures store with a heavy focus on user experience. It's the coming togheter of two of my greatest passions: maker culture and RPGs, fueled by my burning hatred of the typical gaming miniature shopping experience.<br><br>This was the biggest project of my life, and made me develop a bunch of skills, from UI/UX and front end development, to branding and business management. The website and all the logistical side of things are ready, and I plan on releasing it soon, when I finish some hosting related problems.");
 
         //Links
         $('#intro a').eq(0).text("The website (on a development server)");
