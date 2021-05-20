@@ -12,6 +12,13 @@ $(document).ready(function(){
 
     function translate() {
 
+        // Nav -----------------------------------
+        // ---------------------------------------
+
+        $('a[href="#sobre"]').text("About me");
+        $('a[href="#projetos"]').text("Projects");
+        $('a[href="#contato"]').text("Contact & Links");
+
         // Sobre ---------------------------------
         // ---------------------------------------
 

@@ -250,6 +250,12 @@
                 font-family: inherit;
                 font-weight: inherit;
                 color: #ed3333;
+
+                transition: all 0.15s ease-in-out;
+
+                &:hover {
+                    color: black;
+                }
             }
         }
 

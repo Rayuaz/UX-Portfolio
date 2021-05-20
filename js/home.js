@@ -19,104 +19,115 @@ $(document).ready(function(){
     // Transições do menu
     /////// ----------------------------------------------
 
-    $('nav a').on('click', function() {
-        $('nav .active:not(.lang)').removeClass('active');
+    $('nav a:not(.lang)').on('click', function(e) {
 
-        if($(this).hasClass('lang')) {
-            $('nav .active').removeClass('active');
-        } else {
-            $('nav .active:not(.lang)').removeClass('active');
-        }
+        e.preventDefault();
 
-        $(this).addClass('active'); // Tira a classe active do item antigo e bota no novo
-        
         sectionID = $(this).attr('href');
 
-        $('main').fadeOut(100);
-        setTimeout(() => {
-
-            $('section.active').removeClass('active');
-
-            if(sectionID == '#projetos') {
-
-                $('.projetos-sect').each(function() {
-                    $(this).css({width: '0'});
-                    $(this).removeClass('active');
-                });
-
-                $('main').fadeIn(100, function() {
-
-                    if($('nav').hasClass('active')) {
-
-                        $('nav ul').removeClass('active');
-                        $('nav').removeClass('active');  
-
-                    }
-
-                    $(`${sectionID}`).addClass('active');
-
-                });
-
-                let projetosInterval = setInterval(() => {
-                    if($('.projetos-sect:not(.active)').length) {
-                        $('.projetos-sect:not(.active)').eq(0).css({width: '100%'});
-                        $('.projetos-sect:not(.active)').eq(0).addClass('active');
-                    } else {
-                        clearInterval(projetosInterval);
-                    }
-                    
-                }, 100);
-
-            } else {
-
-                $('main').fadeIn(100, function() {
-
-                    if($('nav').hasClass('active')) {
-
-                        $('nav ul').removeClass('active');
-                        $('nav').removeClass('active');  
-
-                    }
-
-                    $(`${sectionID}`).addClass('active');
-
-                });
-
-            }
-            
-            
-        }, 101);
+        $(sectionID)[0].scrollIntoView({behavior: 'smooth'});
 
     });
 
     /////// ----------------------------------------------
-    // Troca de página pelo scroll
+    // Transições do durante o scroll
     /////// ----------------------------------------------
 
-    var userScrolled = false;
-    let evento;
+    let windowHeight = $(window).height();
 
-    $(window).bind('mousewheel', function(event) {
-        userScrolled = true;
-        evento = event;
-    });
+    let lastScroll = 0;
 
-    setInterval(function() {
-        if (userScrolled) {
+    let projetosIndexados = false;
 
-            currentPage = $('nav .active').parent();
+    $(window).on('scroll', function() {        
 
-            if (evento.originalEvent.wheelDelta >= 0) {
-                currentPage.prev().find('a').trigger('click');
-            }
-            else {
-                currentPage.next().find('a').trigger('click');
-            }
+        let top = $(this).scrollTop();
 
+        if (!projetosIndexados && top >= (windowHeight / 4)) { // Transição da seção de projetos
 
-            userScrolled = false;
+            let projetos = [];
+
+            $('.projetos-sect').each(function(index) {
+                projetos[index] = $(this);
+            });
+
+            projetosIndexados = true;
+
+            projetos[0].addClass('active');
+            projetos.shift();
+
+            let showProjetos = setInterval(() => {
+
+                if(projetos.length) {
+
+                    projetos[0].addClass('active');
+                    projetos.shift();
+
+                    console.log(projetos);
+
+                } else {
+
+                    clearInterval(showProjetos);
+
+                }
+
+            }, 300);
+
         }
-    }, 700);
+
+        if (top > lastScroll) { // Se estiver scrollando pra baixo
+
+            if (top < windowHeight) {
+
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(0)').addClass('active');
+                
+            } else if (top >= windowHeight &&  top <= (windowHeight * 1.9)) {
+    
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(1)').addClass('active');
+    
+            }  else if (top >= (windowHeight * 1.9) &&  top <= (windowHeight * 2.9)) {
+    
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(2)').addClass('active');
+    
+            } else if (top >= (windowHeight * 2.9) &&  top <= (windowHeight * 3.9)) {
+    
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(3)').addClass('active');
+    
+            }
+
+        } else { // Se estiver scrollando pra cima
+
+            if (top <= (windowHeight / 2)) {
+
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(0)').addClass('active');
+                
+            } else if (top >= windowHeight &&  top <= (windowHeight * 1.5)) {
+    
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(1)').addClass('active');
+    
+            }  else if (top >= (windowHeight * 1.5) &&  top <= (windowHeight * 2.5)) {
+    
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(2)').addClass('active');
+    
+            } else if (top >= (windowHeight * 2.5) &&  top <= (windowHeight * 3.5)) {
+    
+                $('nav a:not(.lang).active').removeClass('active');         
+                $('nav').find('a:eq(3)').addClass('active');
+    
+            }
+
+        }
+
+        lastScroll = top;        
+
+    });
 
     /////// ----------------------------------------------
     // Imagens da página de hobbies

@@ -48,7 +48,7 @@ nav {
         text-decoration: none;
 
         &:hover {
-            opacity: 0.7;
+            opacity: 0.4;
         }
 
         &.active {
@@ -58,6 +58,8 @@ nav {
         @include media("<=phablet") {
             font-size: 1.25rem;
         }
+
+        transition: all 0.15s ease-in-out;
     }
 
     .hamburger {

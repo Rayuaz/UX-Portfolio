@@ -16,6 +16,15 @@ $(document).ready(function(){
     
     });
 
+    $('nav a').on('click', function() {
+
+        if ($('nav').hasClass('active')) {
+            $('nav').removeClass('active');
+            $('nav ul').removeClass('active');
+        }
+
+    });
+
     let page = window.location.href;
     
     if(page.match(/\?en/)) {

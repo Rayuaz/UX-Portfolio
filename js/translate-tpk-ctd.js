@@ -13,6 +13,13 @@ $(document).ready(function(){
 
     function translate() {
 
+        // Nav -----------------------------------
+        // ---------------------------------------
+
+        $('a[href="index.html#sobre"]').text("About me");
+        $('a[href="index.html#projetos"]').text("Projects");
+        $('a[href="index.html#contato"]').text("Contact & Links");
+
         // Home ---------------------------------
         // ---------------------------------------
 
@@ -29,7 +36,7 @@ $(document).ready(function(){
 
         // Mural da comunidade
         $('#home h2').eq(2).text("Community gallery");
-        $('#home p').eq(3).text(`The community gallery grabs posts with a specific hashtag on instagram. On the product page, users are encouraged to post photos with their miniatures on instagram with this hashtag. The objective is to create community engagement, generate organic publicity, and to show real photos of the products sold on the store (due to the huge catalog, I can't print and photograph every model on the store, so I opted for 3D renders).<br><br>This section is the greatest reason why I wanted to keep the small vertical height. Because of the hierarchy of information, it wouldn't make much sense to place this section higher on the page, but it is still very relevant for this community engagement and real photos.`);
+        $('#home p').eq(3).html(`The community gallery grabs posts with a specific hashtag on instagram. On the product page, users are encouraged to post photos with their miniatures on instagram with this hashtag. The objective is to create community engagement, generate organic publicity, and to show real photos of the products sold on the store (due to the huge catalog, I can't print and photograph every model on the store, so I opted for 3D renders).<br><br>This section is the greatest reason why I wanted to keep the small vertical height. Because of the hierarchy of information, it wouldn't make much sense to place this section higher on the page, but it is still very relevant for this community engagement and real photos.`);
 
 
 
@@ -37,8 +44,8 @@ $(document).ready(function(){
         // ---------------------------------------
 
         // Catalogo
-        $('#Catalogo h1').text("Catalogue");
-        $('#Catalogo p').eq(0).text("This page was my focus during the design process. One the things I observed during muy research, is that the user experience of browsing through the models and, in special, looking for a specific category, in these traditional miniature stores, is awful. Most of the stores don't have a decent categorization system for their product, and/or have a terrible interface for displaying the search filters.<br><br>My objective with this page was precisely to make this browsing experience into something satisfying, that instigates the user to navigate though the products even without the intention of buying anything.");
+        $('#Catalogo h1').text("Catalog");
+        $('#Catalogo p').eq(0).html("This page was my focus during the design process. One the things I observed during muy research, is that the user experience of browsing through the models and, in special, looking for a specific category, in these traditional miniature stores, is awful. Most of the stores don't have a decent categorization system for their product, and/or have a terrible interface for displaying the search filters.<br><br>My objective with this page was precisely to make this browsing experience into something satisfying, that instigates the user to navigate though the products even without the intention of buying anything.");
 
         // Anatomia do card de produto
         $('#Catalogo h2').eq(0).text("Anatomy of the product card");
@@ -62,7 +69,7 @@ $(document).ready(function(){
 
         // Filtros
         $('#Catalogo h2').eq(1).text("Search filters");
-        $('#Catalogo p').eq(6).text(`My biggest source of headaches during this project. This feature took a lot of PHP, which, as previously mentioned, I was not very knowledgeable about.<br></br>I wanted to create cool and captivating visuals for the filters menu. On most other ecommerces, these filters are only checkboxes with labels. These types of menu not only look ugly, but also make it harder to find the specific category of product you were looking for, because they all look the same.<br><br>My solution was to create different buttons for each type of filter. Big buttons, extremely satisfying to click on.<br><br>Other than the buttons, the very category system of the products is much more robust to accomodate relevant categories for each product, and I also implemented a product tag system, to group them by theme, appearence, etc.<br><br>Despite the different look, "behind the curtains" all of these buttons are nothing more than checkboxes with buttons for labels, to make sure they are accessible.`);
+        $('#Catalogo p').eq(6).html(`My biggest source of headaches during this project. This feature took a lot of PHP, which, as previously mentioned, I was not very knowledgeable about.<br></br>I wanted to create cool and captivating visuals for the filters menu. On most other ecommerces, these filters are only checkboxes with labels. These types of menu not only look ugly, but also make it harder to find the specific category of product you were looking for, because they all look the same.<br><br>My solution was to create different buttons for each type of filter. Big buttons, extremely satisfying to click on.<br><br>Other than the buttons, the very category system of the products is much more robust to accomodate relevant categories for each product, and I also implemented a product tag system, to group them by theme, appearence, etc.<br><br>Despite the different look, "behind the curtains" all of these buttons are nothing more than checkboxes with buttons for labels, to make sure they are accessible.`);
 
 
 
@@ -75,15 +82,15 @@ $(document).ready(function(){
 
         // Galeria
         $('#produto h2').eq(0).text(`Gallery`);
-        $('#produto p').eq(1).text(`One of the problems with miniature photos is that it's pretty hard to discern what are the real dimensions of that product. My solution to this problem started in the 3D render itself, where I included a grid on the "ground" of the image, where each square represents 1cm.<br><br>I also included the dimensions of the models as an overlay on the image. This overlay is an HTML element, meaning I can make changes to it without having to redo all my 3D renders, and when the user clicks to see the image in full size, I can hide the overlay, so that there are no distractions from the image.<br><br>Implementing this feature was a challange in both PHP and javascript, but will save me quite of lot of time I would otherwise spend adding these overlays manually through photoshop.`);
+        $('#produto p').eq(1).html(`One of the problems with miniature photos is that it's pretty hard to discern what are the real dimensions of that product. My solution to this problem started in the 3D render itself, where I included a grid on the "ground" of the image, where each square represents 1cm.<br><br>I also included the dimensions of the models as an overlay on the image. This overlay is an HTML element, meaning I can make changes to it without having to redo all my 3D renders, and when the user clicks to see the image in full size, I can hide the overlay, so that there are no distractions from the image.<br><br>Implementing this feature was a challange in both PHP and javascript, but will save me quite of lot of time I would otherwise spend adding these overlays manually through photoshop.`);
 
         // Prazo de produção
         $('#produto h2').eq(1).text(`Production time`);
-        $('#produto p').eq(2).text(`The products on the store are sold on demand, so I took care during the whole design process to leave this information pretty explicit. This is made more evident on this section, but I also took care with the very copy writing of the website -- the world "store", for example, was replaced with "catalogue", and there's no mention of "buying" a product anywhere on the site.<br><br>On the back-end, each product is assigned a value of "days it takes to produce". This value is displayed on the product page, and then again on the cart and on the checkout, with the sum of all of the products' production times.`);
+        $('#produto p').eq(2).html(`The products on the store are sold on demand, so I took care during the whole design process to leave this information pretty explicit. This is made more evident on this section, but I also took care with the very copy writing of the website -- the world "store", for example, was replaced with "catalogue", and there's no mention of "buying" a product anywhere on the site.<br><br>On the back-end, each product is assigned a value of "days it takes to produce". This value is displayed on the product page, and then again on the cart and on the checkout, with the sum of all of the products' production times.`);
 
         // Variations
         $('#produto h2').eq(2).text(`Variations`);
-        $('#produto p').eq(3).text(`This was the most critical part of the design on this page. I saw many bad examples of variable products in other ecommerces, specially on Ali Express, and even on the default behavior for Woocommerce. In these examples, the variations are not selected by default, the price is displayed as an interval (R$ 5,99 - R$ 19,99, for example), and the buy button is deactivated until the user chooses an option.<br><br>This is a problem, first, because it creates an unecessary ammount of clicks to add a product to the shopping cart, but mostly because it adds more information to an already overloaded page.<br><br>My solution was, firstly, add a variation selected by default. On top of that, I also placed this section under the add to cart button.<br><br>This, in my opinion (still has to be tested), improves the reding rythim of the page, because the first thing the user will probably see is the product title, then price, and the add to cart button, which are the most basicm necessary information for him to make a decision.`);
+        $('#produto p').eq(3).html(`This was the most critical part of the design on this page. I saw many bad examples of variable products in other ecommerces, specially on Ali Express, and even on the default behavior for Woocommerce. In these examples, the variations are not selected by default, the price is displayed as an interval (R$ 5,99 - R$ 19,99, for example), and the buy button is deactivated until the user chooses an option.<br><br>This is a problem, first, because it creates an unecessary ammount of clicks to add a product to the shopping cart, but mostly because it adds more information to an already overloaded page.<br><br>My solution was, firstly, add a variation selected by default. On top of that, I also placed this section under the add to cart button.<br><br>This, in my opinion (still has to be tested), improves the reding rythim of the page, because the first thing the user will probably see is the product title, then price, and the add to cart button, which are the most basicm necessary information for him to make a decision.`);
 
         // Dúvidas e comentários
         $('#produto h2').eq(3).text(`Questions and comments`);
@@ -99,7 +106,7 @@ $(document).ready(function(){
         // ---------------------------------------
 
         $('#pintores h1').text("List of brazilian painters");
-        $('#pintores p').text(`The models sols on the store are not painted, and I'm not confident on my skills as a painter to sell my services. But even though it is a "sub-hobby", painting miniatures is not for everyone and some people just want their painted miniatures to look cool on the table. WIth that in mind, I created a page with a list of brazilian miniature painters.<br><br>The goal of this page is to minimize the loss of potential customers that wanted painted miniatures, create a bond with the miniature painting community, and improve the store's SEO.<br><br>Currently, each card has the name of the painter, their location, contact information, and 4 examples of previous works. I aim to annoucen this list togheter with the soft launch of the store.`);
+        $('#pintores p').html(`The models sols on the store are not painted, and I'm not confident on my skills as a painter to sell my services. But even though it is a "sub-hobby", painting miniatures is not for everyone and some people just want their painted miniatures to look cool on the table. WIth that in mind, I created a page with a list of brazilian miniature painters.<br><br>The goal of this page is to minimize the loss of potential customers that wanted painted miniatures, create a bond with the miniature painting community, and improve the store's SEO.<br><br>Currently, each card has the name of the painter, their location, contact information, and 4 examples of previous works. I aim to annoucen this list togheter with the soft launch of the store.`);
 
     }
   

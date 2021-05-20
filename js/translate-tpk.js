@@ -13,6 +13,13 @@ $(document).ready(function(){
 
     function translate() {
 
+        // Nav -----------------------------------
+        // ---------------------------------------
+
+        $('a[href="index.html#sobre"]').text("About me");
+        $('a[href="index.html#projetos"]').text("Projects");
+        $('a[href="index.html#contato"]').text("Contact & Links");
+
         // Intro ---------------------------------
         // ---------------------------------------
 
@@ -41,8 +48,11 @@ $(document).ready(function(){
         $('#problema .i2 h4').text("Lack of real product photos");
         $('#problema .i2 p').text('Some product "photos" are actually just 3D renders, leaving the users wondering about the real products characteristics.');
 
-        $('#problema .i3 h4').text("Hidden information");
-        $('#problema .i3 p').text('Hiding or not even including relevant information such and return and shipping policies.');
+        $('#problema .i3 h4').text("Inefficient Search Engine");
+        $('#problema .i3 p').text('Search engines that only parse titles, making for a very tiring experience.');
+
+        $('#problema .i4 h4').text("Hidden information");
+        $('#problema .i4 p').text('Hiding or not even including relevant information such and return and shipping policies.');
 
         // Outro
         $('#problema .p2').text("These are only some of the most relevant topics, I listed much more stuff, such as phone-only customer support, requests for irrelevant personal info, amateurish visuals, etc.");
@@ -70,7 +80,8 @@ $(document).ready(function(){
         $('#divertida p').html("One of the tools I used to create the best possible browsing experience was to make the very interaction with the elements on the page into something fun and pleasing.<br><br>The search filters tab, for example -- on most other stores, these filters are just checkboxes, which not only look ugly, but also make it difficult to search for a specific filter, because they all look the same.<br><br>My solution for this problem was creating different buttons for each filter. Big, bulky, extremely satisfying to click buttons, which you can see there on the side.");
 
         // More info
-        $('#divertida h4').html(`To read more about my design decisions, <a href="tpk-ctd.html">click here</a>.`);
+        $('#divertida h4 a').html(`Read more about this project`);
+        $('#divertida h4 a').attr('href', 'tpk-ctd.html?en');
 
 
 
